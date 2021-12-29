@@ -26,15 +26,14 @@ function draw() {
   
   for(let i=0; i<windowWidth; i++){
     for(let j=0; j<windowHeight; j++){
+      noiseSeed(123)
       let lightness = noise(i/10,j/11)*1255;
-      colorMode(HSB, 1255);
-      fill(lightness, 1255, 1255);
+      colorMode(HSBA, 1255);
+      fill(lightness, 1255, 1255, .4);
       rect(i,j,1,1);
     }
   }
   
-  
-  noise()
 }
 
 // This Redraws the Canvas when resized
